@@ -13,6 +13,18 @@ const [list, setList] = useState([
 
 ]);
 
+const deleteButton = (id) => {
+  const newList = list.filter(list => list.id !== id);
+
+  setList(newList)
+}
+
+const viewButton = (id) => {
+  const newList = list.filter(list => list.id == id);
+
+  setList(newList)
+}
+
   return (
     <>
         <h1>Home Page</h1>
@@ -28,7 +40,7 @@ const [list, setList] = useState([
      ) )} */}
             
       
-        <BlogLists list={list}  title = "Lista e nxenesave"/>
+        <BlogLists list={list}  title = "Lista e nxenesave" deleteButton={deleteButton} viewButton={viewButton}/>
     </>
   )
 }
