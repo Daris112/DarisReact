@@ -1,0 +1,10 @@
+{
+    "list":[
+    {"id":1, "name":"Albatris", "age":"15","city":"Prizren"},
+    {"id":2, "name":"Fazli", "age":"15","city":"Prizren"},
+    {"id":3, "name":"Lis", "age":"15","city":"Prizren"},
+    {"id":4, "name":"Daris", "age":"15","city":"Prizren"},
+    {"id":5, "name":"Dori", "age":"15","city":"Prizren"},
+    {"id":6, "name":"Rraif", "age":"15","city":"Prizren"}
+    ]
+}
