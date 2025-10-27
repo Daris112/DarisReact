@@ -1,0 +1,13 @@
+img{
+    height: auto;
+    width: 400px;
+    border-radius: 10px;
+}
+
+#h1{
+    font-size: 35px;
+}   
+
+p{
+    text-align: center;
+}
