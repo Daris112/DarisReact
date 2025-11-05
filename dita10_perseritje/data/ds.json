@@ -1,10 +1,57 @@
 {
     "list": [
-        {"id": 1, "brand": "Apple", "country": "USA", "famous_model": "iPhone 15 Pro"},
-        {"id": 2, "brand": "Samsung", "country": "South Korea", "famous_model": "Galaxy S24 Ultra"},
-        {"id": 3, "brand": "Xiaomi", "country": "China", "famous_model": "Xiaomi 14 Pro"},
-        {"id": 4, "brand": "OnePlus", "country": "China", "famous_model": "OnePlus 12"},
-        {"id": 5, "brand": "Google", "country": "USA", "famous_model": "Pixel 9 Pro"},
-        {"id": 6, "brand": "Huawei", "country": "China", "famous_model": "Pura 70 Ultra"}
-    ]
+        {"id": 1,
+        "brand": "Apple",
+        "model": "iPhone 15 Pro",
+        "price": 1199,
+        "image":"/data/iphone17.webp"
+        },
+
+    {
+        "id": 2,
+        "brand": "Samsung",
+        "model": "Galaxy S24 Ultra",
+        "price": 1299,
+        "image":"/data/samsungs24.webp"
+    },
+
+        {
+        "id": 3,
+        "brand": "Xiaomi",
+        "model": "Xiaomi 14 Pro", 
+        "price": 899,
+        "image":"/data/xiaomi14.webp"
+        },
+
+       {
+        "id": 4,
+        "brand": "OnePlus",
+        "model": "OnePlus 12",
+        "price": 799,
+        "image":"/data/oneplus12.webp"
+    },
+    {
+        "id": 5,
+        "brand": "Google",
+        "model": "Pixel 9 Pro",
+        "price": 1099,
+        "image":"/data/googlepixel9.webp"
+    },
+    {
+        "id": 6,
+        "brand": "Huawei",
+        "model": "Pura 70 Ultra",
+        "price": 1199,
+        "image":"/data/huawei.webp"
+    },
+    {
+        "id": 7,
+        "brand": "Sony",
+        "model": "Xperia 1 VI",
+        "price": 1399,
+        "image":"/data/sony.webp"
+    }
+    
+   
+]
 }
