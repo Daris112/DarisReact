@@ -1,34 +1,24 @@
 import React from 'react'
 import './Home.css'
+import phoneData from '../../data/ds.json'
 
-
-function Home() {
+const Home = () => {
   return (
     <>
-        <div className="home-container">
+    <div className="home-container">
       <h1>Home Page</h1>
-
-      <div className="gallery">
-        <div className="card">
-          <img src="./winter1.webp" alt="Winter 1" />
-          <h2>Nature in winter</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, eos unde optio accusantium provident laboriosam rerum.</p>
-        </div>
-
-        <div className="card">
-          <img id='img1' src="./winter2.webp" alt="Winter 2" />
-          <h2>Nature in winter</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, eos unde optio accusantium provident laboriosam rerum.</p>
-        </div>
-
-        <div className="card">
-          <img src="./winter3.webp" alt="Winter 3" />
-          <h2>Nature in winter</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, eos unde optio accusantium provident laboriosam rerum.</p>
-        </div>
-      </div>
+    <div className='gallery'>
+      {phoneData.list
+  .filter(item => [2, 5, 7].includes(item.id)) 
+  .map(item => (
+    <div className="card" key={item.id}>
+      <img src={item.image} alt={item.model} />
+      <h2>{item.brand} {item.model}</h2>
+      <p id='p1'>Price: ${item.price}</p>
     </div>
-
+))}
+</div>
+    </div>
     </>
   )
 }
