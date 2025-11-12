@@ -29,7 +29,6 @@ function Home() {
     setList(newList);
   };
 
-  // 🔧 handle saving edited data
   const handleSaveEdit = (id, updatedData) => {
     const newList = list.map((item) =>
       item.id === id ? { ...item, ...updatedData } : item
@@ -55,7 +54,7 @@ function Home() {
           title="Phones"
           deleteButton={deleteButton}
           viewButton={viewButton}
-          onSaveEdit={handleSaveEdit} // 👈 added
+          onSaveEdit={handleSaveEdit} 
         />
       )}
     </>
