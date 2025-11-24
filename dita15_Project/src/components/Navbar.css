@@ -1,0 +1,75 @@
+nav{
+    background-color: #333;
+    padding: 1rem;
+    width: 100%;
+    position: fixed; 
+    top: 0;        
+    left: 0;       
+    z-index: 1000;   
+}   
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+     list-style: none;
+    display: none; /* hidden on mobile */
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    nav > ul {
+        display: flex;
+    }
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #D4AF37;
+}
+
+
+nav a {
+    background-color: #D4AF37;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 600;
+    color: black;
+    display: none; /* hidden on mobile */
+}
+
+@media (min-width: 768px) {
+    nav a {
+        display: inline-block;
+    }
+}
+
+/* MOBILE MENU BUTTON */
+nav  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    nav  button {
+        display: none;
+    }
+}
+
+/* HAMBURGER ICON */
+nav  button svg {
+    width: 28px;
+    height: 28px;
+}
