@@ -1,0 +1,199 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --gold: #D4AF37;
+  --overlay-dark: rgba(0,0,0,0.7);
+  --overlay-soft: rgba(0,0,0,0.25);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  
+  background-color: #f5f5dc;
+}
+
+/* === HERO WRAPPER === */
+#home {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+
+/* Overlay gradient */
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--overlay-dark), var(--overlay-soft));
+  z-index: 1;
+}
+
+/* Content container */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.inner {
+  max-width: 900px;
+  width: 100%;
+}
+
+/* === TEXT === */
+#hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.05;
+  text-shadow: 0 6px 24px rgba(0,0,0,0.6);
+}
+
+#hero-tagline {
+  margin-top: 15px;
+  font-size: 1.4rem;
+  color: var(--gold);
+  font-weight: 300;
+}
+
+/* === BUTTONS === */
+.hero-actions {
+  margin-top: 25px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Gold button */
+.btn-primary {
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: var(--gold);
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Outline button */
+.btn-secondary {
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 2px solid var(--gold);
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: black;
+  transform: translateY(-3px);
+}
+
+/* Small subtitle */
+.hero-sub {
+  margin-top: 18px;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.95rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  #hero-title {
+    font-size: 2.6rem;
+  }
+
+  #hero-tagline {
+    font-size: 1.1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 22px;
+    font-size: 0.9rem;
+  }
+}
+
+.about-wrapper {
+  width: 100%;
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-box {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* TEXT */
+.about-text {
+  flex: 1;
+}
+
+.about-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  opacity: 0.9;
+}
+
+/* IMAGE */
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-desc {
+    max-width: 700px;
+    margin: 0 auto 18px auto;
+  }
+}
