@@ -1,0 +1,85 @@
+/* Reserve Page Container */
+.reserve-page {
+  min-height: 100vh;
+  background: #fdfaf6;
+  padding: 5rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  width: 98vw;
+}
+
+/* Header */
+.reserve-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.reserve-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+}
+
+.reserve-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Form */
+.reserve-form {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 2.8rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.reserve-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.reserve-form input,
+.reserve-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.9rem;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  background: #fafafa;
+}
+
+.reserve-form input:focus,
+.reserve-form textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+}
+
+.reserve-form textarea {
+  resize: none;
+  height: 150px;
+}
+
+/* Submit Button */
+.reserve-btn2{
+  width: 100%;
+  padding: 1.2rem;
+  background: #d4af37;
+  color: white;
+  border: none;
+  border-radius: 0.9rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35);
+  margin-top: 20px;
+}
+
+.reserve-btn:hover {
+  filter: brightness(1.1);
+}

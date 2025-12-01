@@ -19,16 +19,16 @@ body {
   background-color: #f5f5dc;
 }
 
-/* === HERO WRAPPER === */
+
 #home {
   position: relative;
-  width: 100vw;
+  width: 98.9vw;
   min-height: 100vh;
   overflow: hidden;
 }
 
 
-/* Overlay gradient */
+
 .hero-gradient {
   position: absolute;
   inset: 0;
