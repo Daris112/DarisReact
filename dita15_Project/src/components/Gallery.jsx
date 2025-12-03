@@ -7,7 +7,7 @@ const images = [
   { src: "", title: "Salmon" },
   { src: "", title: "Dessert" },
   { src: "", title: "Drink" },
-  { src: "", title: "Interior" },
+  { src: "./interior.webp", title: "Interior" },
   { src: "", title: "Ambiance" },
   { src: "", title: "Chef Special" }
 

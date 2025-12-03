@@ -6,6 +6,7 @@ import Gallery from './components/Gallery'
 import Reserve from './components/Reserve'
 import Contact from './components/Contact'
 import Reviews from './components/Reviews'
+import Footer from './components/Footer'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/contact" element={<Contact />}/>
         <Route exact path="/reviews" element={<Reviews />}/>
       </Routes>
+      <Footer />
     </Router>
   )
 }
