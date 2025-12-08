@@ -5,13 +5,13 @@
 }
 
 body {
-  background-color: #f5f5dc;
+  background-color: #fff9e6;
 }
 
 /* Home Section */
 #home {
   position: relative;
-  width: 100vw;
+  width: 98.9vw;
   min-height: 100vh;
   overflow: hidden;
   background: linear-gradient(135deg, #fff9e6, #fdf1c2);
@@ -21,15 +21,15 @@ body {
 .bg-shape {
   position: absolute;
   border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.6;
-  animation: floatShapes 20s ease-in-out infinite;
+  filter: blur(15px);
+  opacity: 0.7;
+  animation: floatShapes 10s ease-in-out infinite;
 }
 
 .bg-shape.shape1 {
   width: 400px;
   height: 400px;
-  background: #fde68a;
+  background: #fcd34d;
   top: -100px;
   left: -150px;
   animation-delay: 0s;

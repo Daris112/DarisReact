@@ -3,13 +3,13 @@ import "./Gallery.css";
 
 const images = [
   { src: "./steak.webp", title: "Steak" },
-  { src: "", title: "Pasta" },
-  { src: "", title: "Salmon" },
-  { src: "", title: "Dessert" },
-  { src: "", title: "Drink" },
-  { src: "./interior.webp", title: "Interior" },
-  { src: "", title: "Ambiance" },
-  { src: "", title: "Chef Special" }
+  { src: "./pasta.jpg", title: "Pasta" },
+  { src: "./salmon.webp", title: "Salmon" },
+  { src: "./dessert.webp", title: "Dessert" },
+  { src: "./drink.webp", title: "Drink" },
+  { src: "./interior.jpg", title: "Interior" },
+  { src: "./ambiance.webp", title: "Ambiance" },
+  { src: "./chefspecial.jpg", title: "Chef Special" }
 
 ];
 

@@ -44,7 +44,7 @@ function Index() {
             </p>
           </div>
           <div className="about-image">
-            <img src="/restaurant-about.jpg" alt="Restaurant interior" />
+            <img src="./interior.jpg  " alt="Restaurant interior" />
           </div>
         </div>
       </div>
