@@ -14,7 +14,7 @@ body {
   width: 98.9vw;
   min-height: 100vh;
   overflow: hidden;
-  background: linear-gradient(135deg, #fff9e6, #fdf1c2);
+  background: linear-gradient(135deg, #fff9e6, #f3e7b9);
 }
 
 /* Floating Gold Shapes */
@@ -22,8 +22,8 @@ body {
   position: absolute;
   border-radius: 50%;
   filter: blur(15px);
-  opacity: 0.7;
-  animation: floatShapes 10s ease-in-out infinite;
+  opacity: 0.5;
+  animation: floatShapes 20s ease-in-out infinite;
 }
 
 .bg-shape.shape1 {

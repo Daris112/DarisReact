@@ -170,9 +170,7 @@
   transform: scale(1.15);
 }
 
-/* ==========================
-   Submit Button
-   ========================== */
+
 .submit-btn {
   padding: 14px 20px;
   background: linear-gradient(135deg, #d4af37, #f3d98a);

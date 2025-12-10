@@ -14,25 +14,25 @@ const menuItems ={
   ],
 
   mainCourses: [
-    { name: "Beef Wellington", description: "Tenderloin wrapped in puff pastry & mushrooms", price: "$55", icon: "🥩" },
-    { name: "Seafood Paella", description: "Saffron rice, shrimp, mussels, calamari", price: "$40", icon: "🦐" },
-    { name: "Lamb Chops", description: "Herb-marinated lamb, roasted vegetables", price: "$46", icon: "🍖" },
-    { name: "Lobster Risotto", description: "Creamy risotto with fresh lobster & herbs", price: "$48", icon: "🦞" },
-    { name: "Ribeye Steak", description: "12oz premium beef, truffle butter, vegetables", price: "$42", icon: "🥩" },
-    { name: "Grilled Salmon", description: "Atlantic salmon, lemon beurre blanc, asparagus", price: "$36", icon: "🐟" },
-    { name: "Truffle Pasta", description: "Fresh tagliatelle, black truffle, parmesan", price: "$32", icon: "🍝" },
-    { name: "Chicken Alfredo", description: "Creamy parmesan sauce, grilled chicken", price: "$28", icon: "🍗" }
+    { name: "Beef Wellington", description: "Tenderloin wrapped in puff pastry & mushrooms", price: "$55", image: "/beef-wellington.png" },
+    { name: "Seafood Paella", description: "Saffron rice, shrimp, mussels, calamari", price: "$40", image: "/paella.webp" },
+    { name: "Lamb Chops", description: "Herb-marinated lamb, roasted vegetables", price: "$46", image: "/grilledlamb.jpg" },
+    { name: "Lobster Risotto", description: "Creamy risotto with fresh lobster & herbs", price: "$48", image: "/risotto.webp" },
+    { name: "Ribeye Steak", description: "12oz premium beef, truffle butter, vegetables", price: "$42", image: "/Rib-Eye-Steak.jpg" },
+    { name: "Grilled Salmon", description: "Atlantic salmon, lemon beurre blanc, asparagus", price: "$36", image: "/grilled_salmon.jpg" },
+    { name: "Truffle Pasta", description: "Fresh tagliatelle, black truffle, parmesan", price: "$32", image: "/trufflepasta.jpg" },
+    { name: "Chicken Alfredo", description: "Creamy parmesan sauce, grilled chicken", price: "$28", image: "/CHICKEN-ALFREDO.jpg" }
   ],
 
   desserts: [
-    { name: "Banana Split", description: "Banana, ice cream scoops, chocolate drizzle", price: "$9", icon: "🍌" },
-    { name: "Matcha Cake", description: "Soft matcha sponge, cream layers", price: "$11", icon: "🍵" },
-    { name: "Mango Sorbet", description: "Refreshing tropical sorbet", price: "$8", icon: "🥭" },
-    { name: "Pistachio Gelato", description: "Italian gelato with roasted pistachios", price: "$9", icon: "🍨" },
-    { name: "Crème Brûlée", description: "Vanilla custard, caramelized sugar", price: "$10", icon: "🍰" },
-    { name: "Chocolate Fondant", description: "Warm chocolate cake, vanilla ice cream", price: "$12", icon: "🍫" },
-    { name: "Tarte Tatin", description: "Caramelized apple tart, crème fraîche", price: "$11", icon: "🥧" },
-    { name: "Strawberry Cheesecake", description: "Fresh berries, cream cheese, biscuit base", price: "$13", icon: "🍓" }
+    { name: "Banana Split", description: "Banana, ice cream scoops, chocolate drizzle", price: "$9", image: "/banana-split.jpg" },
+    { name: "Matcha Cake", description: "Soft matcha sponge, cream layers", price: "$11", image: "/Matcha-Cake.webp" },
+    { name: "Mango Sorbet", description: "Refreshing tropical sorbet", price: "$8", image: "/mango-sorbet.avif" },
+    { name: "Pistachio Gelato", description: "Italian gelato with roasted pistachios", price: "$9", image: "/Pistachio-Gelato.jpg" },
+    { name: "Crème Brûlée", description: "Vanilla custard, caramelized sugar", price: "$10", image: "/Creme-Brulee.webp" },
+    { name: "Chocolate Fondant", description: "Warm chocolate cake, vanilla ice cream", price: "$12", image: "/ChocolateFondant.webp" },
+    { name: "Tarte Tatin", description: "Caramelized apple tart, crème fraîche", price: "$11", image: "/apple-tarte-tatin.webp" },
+    { name: "Strawberry Cheesecake", description: "Fresh berries, cream cheese, biscuit base", price: "$13", image: "/StrawberryChesecake.jpg" }
   ]
 }
 
@@ -44,7 +44,7 @@ const Menu = () => {
       <div className="menu-items">
         {items.map((item, idx) => (
           <div key={idx} className="menu-card">
-            <div className={`menu-card-icon ${item.gradient}`}>
+            <div className={`menu-card-icon ${item.gradient}`}> 
               {item.image ? (
                 <img src={item.image} alt={item.name} />
               ) : (

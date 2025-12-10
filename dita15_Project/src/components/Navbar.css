@@ -1,4 +1,5 @@
-nav{
+/* NAVBAR */
+nav {
     background-color: #333;
     padding: 1rem;
     width: 100%;
@@ -9,7 +10,6 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }   
 
 .nav-left {
@@ -34,7 +34,7 @@ nav{
 }
 
 .nav-links a:hover {
-  color: #f2c300;                 /* yellow hover */
+  color: #f2c300; /* yellow hover */
 }
 
 /* RIGHT BUTTON */
@@ -51,4 +51,58 @@ nav{
 
 .reserve-btn:hover {
   background: #ffe367;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-right: 20px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #f0f0f0;
+  transition: 0.3s;
+}
+
+/* Hamburger animation when open */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px; /* below navbar */
+    right: 0;
+    background-color: #333;
+    flex-direction: column;
+    width: 200px;
+    gap: 15px;
+    padding: 15px;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .reserve-btn {
+    display: none; /* optional: hide on mobile */
+  }
 }
