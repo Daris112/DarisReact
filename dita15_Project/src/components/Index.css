@@ -23,12 +23,12 @@ body {
   border-radius: 50%;
   filter: blur(15px);
   opacity: 0.5;
-  animation: floatShapes 20s ease-in-out infinite;
+  animation: floatShapes 10s ease-in-out infinite;
 }
 
 .bg-shape.shape1 {
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   background: #fcd34d;
   top: -100px;
   left: -150px;
@@ -36,37 +36,37 @@ body {
 }
 
 .bg-shape.shape2 {
-  width: 500px;
-  height: 500px;
+  width: 550px;
+  height: 550px;
   background: #fcd34d;
   bottom: -150px;
   right: -200px;
-  animation-delay: 5s;
+  animation-delay: 2s;
 }
 
 .bg-shape.shape3 {
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   background: #f3d98a;
   top: 200px;
   right: -100px;
-  animation-delay: 10s;
+  animation-delay: 5s;
 }
 
 .bg-shape.shape4 {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   background: #d4af37;
   bottom: 100px;
   left: -80px;
-  animation-delay: 15s;
+  animation-delay: 7s;
+}
+@keyframes floatShapes {
+  0%   { transform: translate(0,0); }
+  50%  { transform: translate(120px,-120px); }
+  100% { transform: translate(0,0); }
 }
 
-@keyframes floatShapes {
-  0% { transform: translate(0,0) rotate(0deg); }
-  50% { transform: translate(50px,-50px) rotate(180deg); }
-  100% { transform: translate(0,0) rotate(360deg); }
-}
 
 /* Dark overlay */
 .hero-gradient {

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Menu.css";
 
-const menuItems ={
+const menuItems = {
   starters: [
     { name: "Stuffed Mushrooms", description: "Herb cream cheese, parmesan, garlic", price: "$11", image: "/stuffedmushrooms.jpg" },
     { name: "Shrimp Cocktail", description: "Chilled prawns, cocktail sauce, lemon", price: "$16", image: "/Shrimp.jpg" },
@@ -34,22 +34,39 @@ const menuItems ={
     { name: "Tarte Tatin", description: "Caramelized apple tart, crème fraîche", price: "$11", image: "/apple-tarte-tatin.webp" },
     { name: "Strawberry Cheesecake", description: "Fresh berries, cream cheese, biscuit base", price: "$13", image: "/StrawberryChesecake.jpg" }
   ]
-}
-
+};
 
 const Menu = () => {
+
+  useEffect(() => {
+    const cards = document.querySelectorAll(".menu-card");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cards.forEach((card, index) => {
+      card.style.transitionDelay = `${index * 0.1}s`;
+      observer.observe(card);
+    });
+  }, []);
+
   const renderMenuCategory = (title, items) => (
     <div className="menu-category">
       <h3 className="menu-category-title">{title}</h3>
       <div className="menu-items">
         {items.map((item, idx) => (
           <div key={idx} className="menu-card">
-            <div className={`menu-card-icon ${item.gradient}`}> 
-              {item.image ? (
-                <img src={item.image} alt={item.name} />
-              ) : (
-                <span className="menu-icon-emoji">{item.icon}</span>
-              )}
+            <div className="menu-card-icon">
+              <img src={item.image} alt={item.name} />
               <div className="icon-glow"></div>
             </div>
             <div className="menu-card-content">
@@ -70,6 +87,7 @@ const Menu = () => {
           <h2>Our Exquisite Menu</h2>
           <p>Handpicked delights crafted for your taste</p>
         </div>
+
         {renderMenuCategory("Starters", menuItems.starters)}
         {renderMenuCategory("Main Courses", menuItems.mainCourses)}
         {renderMenuCategory("Desserts", menuItems.desserts)}

@@ -1,4 +1,6 @@
-
+/* ==========================
+   Base Page Styles
+   ========================== */
 .reviews-page {
   min-height: 100vh;
   background: #fff9e6;
@@ -27,7 +29,9 @@
   color: #7e705d;
 }
 
-
+/* ==========================
+   Reviews Grid
+   ========================== */
 .reviews-grid {
   max-width: 1200px;
   margin: 0 auto;
@@ -35,7 +39,6 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 28px;
 }
-
 
 .review-card {
   background: #ffffff;
@@ -86,7 +89,7 @@
 }
 
 /* ==========================
-   Review Form Section
+   Review Form
    ========================== */
 .review-form-section {
   margin-top: 80px;
@@ -107,7 +110,6 @@
   color: #7e705d;
   margin-bottom: 35px;
 }
-
 
 .review-form {
   display: flex;
@@ -150,9 +152,6 @@
   resize: vertical;
 }
 
-/* ==========================
-   Rating Stars in Form
-   ========================== */
 .rating-stars {
   display: flex;
   gap: 6px;
@@ -169,7 +168,6 @@
   color: #d4af37;
   transform: scale(1.15);
 }
-
 
 .submit-btn {
   padding: 14px 20px;
@@ -195,9 +193,48 @@
 }
 
 /* ==========================
-   Responsive Adjustments
+   Responsive
    ========================== */
 @media (max-width: 640px) {
   .reviews-header h1 { font-size: 34px; }
   .form-title { font-size: 32px; }
+}
+
+/* ==========================
+   PAGE LOAD ANIMATIONS
+   ========================== */
+.reviews-header {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.review-card {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.review-card:nth-child(1) { animation-delay: 0.2s; }
+.review-card:nth-child(2) { animation-delay: 0.35s; }
+.review-card:nth-child(3) { animation-delay: 0.5s; }
+.review-card:nth-child(4) { animation-delay: 0.65s; }
+.review-card:nth-child(5) { animation-delay: 0.8s; }
+
+.review-form-section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

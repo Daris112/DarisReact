@@ -1,8 +1,7 @@
-/* Section */
 .menu-section {
   padding: 6rem 1rem;
   font-family: 'Inter', sans-serif;
-  width: 98vw;
+  width: 98.9vw;
   background-color: #fff9e6;
 }
 
@@ -20,10 +19,7 @@
 .menu-header h2 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
-  font-weight: 700;
   color: #bfa35a;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
 }
 
 .menu-header p {
@@ -31,7 +27,7 @@
   color: #555;
 }
 
-/* Menu Category */
+/* Category */
 .menu-category {
   margin-bottom: 5rem;
 }
@@ -41,11 +37,10 @@
   font-size: 2.2rem;
   color: #d4af37;
   margin-bottom: 3rem;
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-/* Menu Items Grid */
+/* Grid */
 .menu-items {
   display: grid;
   grid-template-columns: 1fr;
@@ -58,103 +53,67 @@
   }
 }
 
-/* Menu Card */
+/* Card */
 .menu-card {
   background: #fff;
   border-radius: 1.5rem;
   overflow: hidden;
-  position: relative;
-  box-shadow: 0 12px 28px rgba(158, 137, 70, 0.979);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 12px 28px rgba(158, 137, 70, 0.35);
   display: flex;
   flex-direction: column;
+
+  /* Animation initial state */
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.menu-card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .menu-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 24px 50px rgb(206, 169, 66);
+  box-shadow: 0 24px 50px rgba(194, 156, 53, 0.911);
 }
 
-/* Card Icon (image container) */
+/* Image */
 .menu-card-icon {
   height: 14rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4.5rem;
   position: relative;
-  border-radius: 1.5rem 1.5rem 0 0;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));
 }
+
 .menu-card-icon img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  transition: transform 0.6s ease;
 }
 
-/* Subtle overlay to add depth and improve text contrast */
-.menu-card-icon::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.12) 100%);
-  z-index: 1;
-  pointer-events: none;
+.menu-card:hover img {
+  transform: scale(1.05);
 }
 
-/* Image styling: fill, crop, and gentle hover */
-.menu-card-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transform-origin: center;
-  transition: transform 0.6s cubic-bezier(.2,.8,.2,1);
-  z-index: 0;
-  border-radius: 1.5rem 1.5rem 0 0;
-}
-
-/* Slight scale on hover for a lively effect */
-.menu-card:hover .menu-card-icon img {
-  transform: scale(1.04);
-}
-
-/* Keep the glow above the image */
+/* Glow */
 .icon-glow {
   position: absolute;
-  width: 200%;
-  height: 200%;
-  top: -50%;
-  left: -50%;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.18), transparent 60%);
+  inset: -50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 60%);
   animation: glowMove 6s linear infinite;
   pointer-events: none;
-  z-index: 2;
-  mix-blend-mode: screen;
-  opacity: 0.9;
 }
 
 @keyframes glowMove {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-/* Emoji fallback shown when no image */
-.menu-icon-emoji {
-  z-index: 2;
-  font-size: 3.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  text-shadow: 0 4px 18px rgba(0,0,0,0.4);
-}
-
-/* Card Content */
+/* Content */
 .menu-card-content {
   padding: 2rem 1.5rem;
   text-align: center;
@@ -163,14 +122,11 @@
 .menu-card-name {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 0.7rem;
-  color: #222;
 }
 
 .menu-card-description {
-  font-size: 1rem;
   color: #666;
-  margin-bottom: 1.2rem;
+  margin: 1rem 0;
 }
 
 .menu-card-price {
